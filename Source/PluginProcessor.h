@@ -89,7 +89,7 @@ private:
     {
         LowCut,
         Peak,
-        HigCut
+        HighCut
     };
 
     void updatePeakFilter(const ChainSettings& chainSettings);
@@ -118,10 +118,13 @@ private:
         {
         case Slope_48:
             update<3>(leftLowCut, cutCoefficients);
+            [[fallthrough]];
         case Slope_36:
             update<2>(leftLowCut, cutCoefficients);
+            [[fallthrough]];
         case Slope_24:
             update<1>(leftLowCut, cutCoefficients);
+            [[fallthrough]];
         case Slope_12:
             update<0>(leftLowCut, cutCoefficients);
         }
