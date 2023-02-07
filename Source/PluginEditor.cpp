@@ -375,11 +375,11 @@ void ResponseCurveComponent::paint(juce::Graphics& g)
     g.setColour(Colours::skyblue);
     g.strokePath(leftChannelFFTPath, PathStrokeType(1.f));
 
-   /* auto rightChannelFFTPath = rightPathProducer.getPath();
+    auto rightChannelFFTPath = rightPathProducer.getPath();
     rightChannelFFTPath.applyTransform(AffineTransform().translation(responseArea.getX(), responseArea.getY()));
 
     g.setColour(Colours::lightyellow);
-    g.strokePath(rightChannelFFTPath, PathStrokeType(1.f));*/
+    g.strokePath(rightChannelFFTPath, PathStrokeType(1.f));
 
     g.setColour(Colours::orange);
     g.drawRoundedRectangle(getRenderArea().toFloat(), 4.f, 1.f);
