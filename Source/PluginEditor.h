@@ -185,7 +185,7 @@ struct RotarySliderWithLabels : juce::Slider
 {
 public:
     RotarySliderWithLabels(
-        juce::RangedAudioParameter& rap, const juce::String unitSuffix) : 
+        juce::RangedAudioParameter& rap, const juce::String& unitSuffix) : 
         juce::Slider(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag,
             juce::Slider::TextEntryBoxPosition::NoTextBox),
         param(&rap),
